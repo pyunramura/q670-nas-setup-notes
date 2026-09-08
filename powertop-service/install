@@ -1,0 +1,12 @@
+#!/bin/bash
+chmod +x data/powertop_tunables
+cp -n data/powertop.service /etc/systemd/system/ &&
+cp -n data/powertop_tunables.service /etc/systemd/system &&
+cp -n data/powertop.conf /etc &&
+cp -n data/powertop_tunables /usr/local/bin
+systemctl daemon-reload
+systemctl enable powertop.service
+systemctl enable powertop_tunables.service
+systemctl start powertop.service
+systemctl start powertop_tunables.service
+exit 0

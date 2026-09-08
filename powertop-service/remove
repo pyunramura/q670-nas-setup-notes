@@ -1,0 +1,11 @@
+#!/bin/bash
+systemctl stop powertop.service
+systemctl disable powertop.service
+systemctl stop powertop_tunables.service
+systemctl disable powertop_tunables.service
+systemctl daemon-reload
+rm /etc/systemd/system/powertop.service
+rm /etc/systemd/system/powertop_tunables.service
+rm /etc/powertop.conf
+rm /usr/local/bin/powertop_tunables
+exit 0

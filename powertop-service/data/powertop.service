@@ -1,0 +1,10 @@
+[Unit]
+Description=Powertop startup
+Before=powertop_tunables.service
+
+[Service]
+ExecStart=/usr/sbin/powertop
+RemainAfterExit=true
+
+[Install]
+WantedBy=multi-user.target

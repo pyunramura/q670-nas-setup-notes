@@ -1,0 +1,5 @@
+#!/bin/bash
+#Reading from /etc/powertop.conf
+#This script exists so that it can be executed from the command line if necessary
+bash /etc/powertop.conf
+exit 0
